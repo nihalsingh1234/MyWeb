@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pizza Hut – Place Order</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body >
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+
+  <section class="order-section">
+    <h2>📝 Place Your Order</h2>
+    <form id="order-form" class="order-form">
+      <div class="grid-2">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+      </div>
+      <div class="grid-2">
+        <input type="tel" name="phone" placeholder="Mobile Number" required />
+        <input type="text" name="address" placeholder="Delivery Address" required />
+      </div>
+
+      <h3>Select Pizzas</h3>
+      <div id="pizzas-container" class="pizzas-container">
+        <!-- Pizza row 1 -->
+        <div class="pizza-row">
+          <select class="pizza-select" required>
+            <option value="" data-price="0">-- Choose a Pizza --</option>
+            <option value="Margherita" data-price="249">Margherita – ₹249</option>
+            <option value="Pepperoni" data-price="299">Pepperoni – ₹299</option>
+            <option value="Veggie Supreme" data-price="349">Veggie Supreme – ₹349</option>
+            <option value="Cheese Burst" data-price="329">Cheese Burst – ₹329</option>
+            <option value="Farmhouse" data-price="359">Farmhouse – ₹359</option>
+            <option value="Barbecue Chicken" data-price="379">Barbecue Chicken – ₹379</option>
+            <option value="Paneer Tikka" data-price="369">Paneer Tikka – ₹369</option>
+            <option value="Mexican Green Wave" data-price="349">Mexican Green Wave – ₹349</option>
+            <option value="Deluxe Veggie" data-price="359">Deluxe Veggie – ₹359</option>
+            <option value="Chicken Sausage" data-price="339">Chicken Sausage – ₹339</option>
+            <option value="Indi Tandoori Paneer" data-price="379">Indi Tandoori Paneer – ₹379</option>
+          </select>
+          <input type="number" class="qty-input" placeholder="Qty" min="1" value="1" required />
+          <button type="button" class="remove-btn">–</button>
+        </div>
+      </div>
+
+      <button type="button" id="add-row" class="btn secondary">+ Add Another Pizza</button>
+
+      <div class="total-display">
+        Total Price: ₹<span id="totalPrice">0</span>
+      </div>
+
+      <button type="submit" class="btn primary">Review Order</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

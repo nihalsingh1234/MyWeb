@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pizza Hut - Hero Section</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Pizza Hut Logo" />
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="auth.html">Login</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+      </nav>
+      </div>
+      </header>
+ 
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>🔥 Hot & Fresh Pizzas</h1>
+      <p>Delivered in 30 minutes or less – straight from the oven!</p>
+      <div class="hero-buttons">
+        <a href="order.html" class="btn primary">Order Now</a>
+        <a href="menu.html" class="btn secondary">Explore Delicious Menu</a>
+      </div>
+    </div>
+  </section>
+  <section class="deals-section">
+  <h2>🔥 Today's Special Deals</h2>
+  <div class="deals-container">
+    <!-- Deal Card 1 -->
+    <div class="deal-card">
+      <img src="img/dish2.jpg" alt="Pizza Deal">
+      <div class="deal-info">
+        <h3>Buy 1 Get 1 Free</h3>
+        <p>Order any medium pizza and get one absolutely free!</p>
+        <a href="order.html" class="btn-deal">Order Now</a>
+      </div>
+    </div>
+
+    <!-- Deal Card 2 -->
+    <div class="deal-card">
+      <img src="img/dish1.jpg" alt="Pepperoni">
+      <div class="deal-info">
+        <h3>50% Off on 2nd Pizza</h3>
+        <p>Flat half-price on your second large pizza – today only!</p>
+        <a href="order.html" class="btn-deal">Order Now</a>
+      </div>
+    </div>
+
+    <!-- Deal Card 3 -->
+    <div class="deal-card">
+      <img src="img/dish3.jpg" alt="Combo Meal">
+      <div class="deal-info">
+        <h3>Meal Combo ₹299</h3>
+        <p>Small pizza, garlic bread & coke – the perfect combo!</p>
+        <a href="order.html" class="btn-deal">Order Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="menu-section">
+  <h2>🍕 Explore Our Menu</h2>
+
+  <div class="menu-grid">
+    <!-- Menu Item 1 -->
+    <div class="menu-item">
+      <!-- <img src="img/margherita.jpg" alt="Margherita Pizza"> -->
+      <div class="menu-info">
+        <h3>Margherita</h3>
+        <p>Classic delight with 100% real mozzarella cheese</p>
+        <span class="price">₹249</span>
+        <a href="#cart" class="btn-menu">Add to Cart</a>
+      </div>
+    </div>
+
+    <!-- Menu Item 2 -->
+    <div class="menu-item">
+      <img src="img/visual.jpg"visual-showcase">
+  <h2>📸 Visual Showcase</h2>
+  <div class="gallery-grid">
+   <img src="img/cheese.jpg" alt="Cheesy Pizza">
+    <img src="img/slice.jpg" alt="Pepperoni Pizza">
+    <img src="img/slice.jpg" alt="Pizza Slice">
+    <img src="img/resinterior.jpg" alt="Restaurant Interior">
+    <img src="img/oven.jpg" alt="Pizza Oven">
+    <img src="img/pizza-party.jpg" alt="Pizza Party">
+  </div>
+</section>
+<section class="about-section">
+  <div class="about-container">
+    <div class="about-image">
+      <img src="img/1.png" alt="Pizza Chef at work">
+    </div>
+    <div class="about-text">
+      <h2>About Pizza Hut</h2>
+      <p>
+        Serving over 1 million pizzas a day globally. Since 1958, Pizza Hut has been the go-to brand for flavor and family moments. We believe in crafting delicious pizzas with fresh ingredients and a passion for quality. Our ovens bring warmth and happiness to every table.
+      </p>
+      <p>
+        From classic favorites to innovative new recipes, Pizza Hut is committed to delivering an unforgettable pizza experience every time. Join us and savor the perfect slice!
+      </p>
+    </div>
+  </div>
+</section>
+<section class="download-app-section">
+  <div class="download-container">
+    <div class="download-text">
+      <h2>📲 Download the Pizza Hut App</h2>
+      <p>Order your favorite pizzas faster, track deliveries, and enjoy exclusive app-only deals!</p>
+      <div class="app-buttons">
+        <a href="#" class="app-btn google-play" aria-label="Download on Google Play Store">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play Store Badge">
+        </a>
+        <a href="#" class="app-btn app-store" aria-label="Download on Apple App Store">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Apple App Store Badge">
+        </a>
+      </div>
+    </div>
+    <div class="download-image">
+      <img src="https://source.unsplash.com/400x400/?mobile,pizza" alt="Pizza Hut App on Mobile">
+    </div>
+  </div>
+</section>
+
+<!-- Cart Preview (Sticky Bottom on Mobile) -->
+<div id="cart-preview" class="cart-preview">
+  <div class="cart-info">
+    <span class="cart-items">3 items</span>
+    <span class="cart-total">₹899</span>
+  </div>
+  <button class="cart-btn" onclick="alert('Go to cart page!')">View Cart</button>
+</div>
+
+<section class="testimonials-section">
+  <h2>⭐ Customer Reviews</h2>
+  <div class="testimonials-grid">
+
+    <!-- Testimonial 1 -->
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer 1">
+      <h3>Rakesh Sinha</h3>
+      <p>"Super fast delivery and piping hot pizza. Love the cheese burst!"</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer 2">
+      <h3>Neha Sharma</h3>
+      <p>"Best combo meals at such a great price. My kids love it!"</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial-card">
+      <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Customer 3">
+      <h3>Aditya Mehra</h3>
+      <p>"Tried the new spicy crust and it's amazing. Highly recommend!"</p>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="store-locator">
+  <div class="locator-content">
+    <h2>📍 Find a Pizza Hut Near You</h2>
+    <p> NIHAL SINGH KALYANI PIZZA HUT, SM JOSHI COLLEGE HADAPSAR PUNE.</p>
+
+    <!-- Embedded Google Map -->
+    <div class="map-container">
+      <!-- <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1161002186!2d72.7410992743126!3d19.082197838121742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63c4efb6a7d%3A0xf08 -->
+
+        <section class="contact-section">
+  <div class="contact-container">
+    <!-- Contact Text -->
+    <div class="contact-info">
+      <h2>📞 Contact & Support</h2>
+      <p>We’re here to help! Reach out to us for support, feedback, or any inquiries.</p>
+
+      <ul class="support-details">
+        <li><strong>📧 Email:</strong> nihalsingh@pizzahut.com</li>
+        <li><strong>📱 Phone:</strong> +91 73857 96776</li>
+        <li><strong>🕒 Hours:</strong> Mon–Sun: 10am – 11pm</li>
+      </ul>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form>
+        <input type="text" placeholder="Enter Your Name" required>
+        <input type="email" placeholder="Enter@gmail.com" required>
+        <textarea rows="5" placeholder="WELCOME IN OUR FOODIE PAGE" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Footer Logo / Brand -->
+    <div class="footer-brand">
+      <h3>🍕 Pizza Hut</h3>
+      <p>Delivering hot & cheesy happiness since 1958.</p>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Offers</a></li>
+        <li><a href="#">Store Locator</a></li>
+        <li><a href="#">Order Now</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>Email: nihalsingh@pizzahut.com</p>
+      <p>Phone: +91 73857 96776</p>
+    </div>
+
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="img/facebook.jpg" alt="Facebook"></a>
+        <a href="#"><img src="img/insta.jpg" alt="Instagram"></a>
+        <a href="#"><img src="img/twitter.jpg" alt="Twitter"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Pizza Hut. All rights reserved.</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

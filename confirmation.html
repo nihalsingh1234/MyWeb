@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pizza Hut – Confirm Order</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Back Link -->
+  <a href="order.html" class="back-link">← Modify Order</a>
+
+  <section class="order-section">
+    <h2>🛒 Confirm Your Order</h2>
+
+    <div id="review-content" class="order-review">
+      <!-- Filled in by JavaScript -->
+    </div>
+
+    <button id="confirmBtn" class="btn primary">Confirm Order</button>
+  </section>
+
+  <script>
+    // Parse the URL params
+    const params = new URLSearchParams(window.location.search);
+    const review = document.getElementById('review-content');
+
+    // Basic customer info
+    const name = params.get('name') || '';
+    const email = params.get('email') || '';
+    const phone = params.get('phone') || '';
+    const address = params.get('address') || '';
+
+    // Generate the review summary
+    let html = `
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Address:</strong> ${address}</p>
+      <h3>🧾 Your Pizzas:</h3>
+      <div id="pizzaList"></div>
+    `;
+
+    review.innerHTML = html;
+
+    // List each selected pizza
+    const count = +params.get('count') || 0;
+    let total = 0;
+    const pizzaList = document.getElementById('pizzaList');
+
+    for (let i = 0; i < count; i++) {
+      const pizzaName = params.get(`pizza${i}`) || '';
+      const price = +params.get(`price${i}`) || 0;
+      const qty = +params.get(`qty${i}`) || 0;
+
+      const subtotal = price * qty;
+      total += subtotal;
+
+      const p = document.createElement('p');
+      p.innerText = `${pizzaName} × ${qty} → ₹${subtotal}`;
+      pizzaList.appendChild(p);
+    }
+
+    // Display total price
+    const totalEl = document.createElement('p');
+    totalEl.className = 'total-display';
+    totalEl.innerHTML = `<strong>Total:</strong> ₹${total}`;
+    review.appendChild(totalEl);
+
+    // Handle final confirmation
+    document.getElementById('confirmBtn').addEventListener('click', () => {
+      alert('✅ Thank you! Your order is now confirmed.');
+      window.location.href = 'index.html';
+    });
+  </script>
+
+</body>
+</html>
